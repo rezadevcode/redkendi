@@ -690,9 +690,10 @@ footer{
 	}
 }
 #layer6{
-	// &:after{
+	&:after{
 		background-image: url('../images/mainbg_7.jpg');
-	// }
+		// -webkit-animation: zoomin 50s linear infinite;
+	}
 	&:before{
 		display: none;
 	}
@@ -775,15 +776,22 @@ footer{
 			color: #ffffff;
 			font-family: 'Conv_Diavlo_BOOK_II_37';
 			text-decoration: none;
+			&:hover{
+				h6{
+					opacity: 1;
+					transition: all .5s ease;
+				}
+			}
+		}
+		h6{
+			margin-top: 5px;
+			opacity: 0;
 		}
 		img{
 			max-width: 50%;
 		}
 		i.fas{
 			font-size: 28px;
-		}
-		h6{
-			margin-top: 5px;
 		}
 	}
 }

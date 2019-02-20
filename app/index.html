@@ -30,10 +30,16 @@
 				  	<img src="images/image_logo_small.png" width="" class="imgLogosmall">
 				  </a> -->
 				  <ul class="navbar-nav ml-auto">
-				    <li class="nav-item">
-				      <a class="nav-link active" href="https://caterer.redkendi.com" target="_blank">Caterer</a>
+				    <li class="nav-item d-sm-block d-none">
+				      <a class="nav-link active" href="https://caterer.redkendi.com" target="_blank">Register My Caterer</a>
 				    </li>
-				    <li class="nav-item">
+				    <li class="nav-item d-sm-block d-none">
+				      <a class="nav-link" href="https://customer.redkendi.com" target="_blank">Need Catering Service</a>
+				    </li>
+				    <li class="nav-item d-lg-none d-sm-none">
+				    	<a class="nav-link active" href="https://caterer.redkendi.com" target="_blank">Caterer</a>
+				    </li>
+				    <li class="nav-item d-lg-none d-sm-none">
 				      <a class="nav-link" href="https://customer.redkendi.com" target="_blank">Customer</a>
 				    </li>
 				    <!-- <li class="nav-item">
@@ -51,8 +57,8 @@
 		<section id="layer0" class="screen-page">
 			<div class="ct-center">
 				<div class="container">
-				    <div class="row">
-				     	<div class="col-12 col-lg-12 align-self-center innerText">
+				    <div class="row justify-content-center">
+				     	<div class="col-11 col-lg-12 align-self-center innerText">
 		     				<div class=" wrapplogo Animate" data-delay="1" data-animate="slideUp">
 								<h1>
 									<img src="images/redkendi_white.png" width="300">
@@ -74,6 +80,12 @@
 				    </div>
 				</div>
 			</div>
+			<!-- <div class="d-lg-none d-sm-block">
+				<div class="downlod_icon">
+					<span>DOWNLOAD NOW</span>&nbsp;
+					<img src="images/mobile/downlod_icon.png">
+				</div>
+			</div> -->
 		</section>
 		<section id="layer1" class="screen-page align-item-center">
 			<div class="progressingbar"></div>
@@ -104,7 +116,7 @@
 						</div>
 						<div class="col-12 align-self-center">
 							<div class="row align-item-center justify-content-center">
-								<div class="col-12 col-lg-3 text-center wrapleft">
+								<div class="col-12 col-sm-4 col-lg-3 text-center wrapleft">
 									<div class="roundImg topos Animate2" data-delay="3" data-animate="scaleUp"><img src="images/dottedwhite.png" width="30"></div>
 									<div class="copyContent Animate2" data-delay="4" data-animate="slideUp">
 										<span>Help society gain<br>
@@ -113,13 +125,13 @@
 										</span>
 									</div>
 								</div>
-								<div class="col-12 col-lg-3 text-center wrapcenter">
+								<div class="col-12 col-sm-4 col-lg-3 text-center wrapcenter">
 									<div class="roundImg botpos Animate2" data-delay="7" data-animate="scaleUp"><img src="images/dottedwhite.png" width="30"> </div>
 									<div class="copyContent Animate2" data-delay="8" data-animate="slideUp">
 										<span>Empower workers’<br> nutrition consumption via managed democratization</span>
 									</div>
 								</div>
-								<div class="col-12 col-lg-3 text-center wrapright">
+								<div class="col-12 col-sm-4 col-lg-3 text-center wrapright">
 									<div class="roundImg Animate2" data-delay="5" data-animate="scaleUp"><img src="images/dottedwhite.png" width="30"></div>
 									<div class="Animate2 copyContent" data-delay="6" data-animate="slideUp">
 										<span>Assist our partners<br>build a sustainable<br> business</span>
@@ -139,14 +151,14 @@
 				    	<div class="subHeaher Animate" data-delay="1" data-animate="slideUp">
 							<h1>Our Story</h1>
 						</div>
-						<div class="col-12 align-self-center position-absolute MleftAnimate" data-slide="-25" data-style="margin-left" data-reset="0" data-firefox="leftFrfox">
+						<div class="col-12 align-self-center position-absolute MleftAnimate MbAnim1" data-slide="-25" data-style="margin-left" data-reset="0" data-firefox="leftFrfox">
 							<div class="row align-item-center justify-content-center">
-						     	<div class="col-12 col-lg-6">
+						     	<div class="col-12 col-sm-12 col-lg-6 d-sm-block d-none">
 				     				<div class="roundRedBg Animate" data-delay="2" data-animate="scaleUp">
 				     					<span>Our<br> Story</span>
 				     				</div>
 								</div>
-								<div class="col-12 col-lg-6 align-self-end rightBtm">
+								<div class="col-12 col-sm-12 col-lg-6 align-self-end rightBtm">
 									<div class="Animate heeadTitle" data-delay="3" data-animate="slideUp">REDKENDI ANDALAN MITRA</div>
 
 			<div class="Animate" data-delay="3" data-animate="slideUp"><p>We want to enhance people productivity via nutrition empowerment</p></div>
@@ -157,7 +169,12 @@
 						</div>
 				    </div>
 				</div>
-				<div class="wrapperBg MleftAnimate" data-slide="0" data-style="right" data-reset="-25">
+				<div class="moreButton d-lg-none d-sm-none">
+					<a href="#">
+						<i class="fas fa-angle-double-right"></i> <span>More About Us</span>
+					</a>
+				</div>
+				<div class="wrapperBg MleftAnimate MbAnim2" data-slide="0" data-style="right" data-reset="-25">
 					<div class="paddContent">
 						<div class="group-item">
 							<div class="img-item">
@@ -184,6 +201,11 @@
 							<p>Empower Workers both blue and white collars to have access to appropriate nutrition and welfare</p>
 						</div>
 					</div>
+					<div class="returnBack d-lg-none d-sm-none">
+						<a href="#">
+							<i class="fas fa-reply"></i> <span>Return</span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -203,9 +225,10 @@
 				</div>
 			</div>
 			<div class="wrapper-position batchtwo ourValueBgitem">
-				<div class="container-fluid">
+				<!-- desktop -->
+				<div class="container-fluid d-sm-block d-none">
 					<div class="row">
-						<div class="col-lg-3 col-md-4 wrapLeft">
+						<div class="col-sm-4 col-md-4 col-lg-3 wrapLeft">
 							<div class="subHeader">
 								<p class="tagline">Our Values</p>
 							</div>
@@ -236,15 +259,15 @@
 								</li>
 							</ul>
 						</div>
-						<div class="col-lg-9 col-md-8 wrappBg">
+						<div class="col-sm-8 col-md-8 col-lg-9 wrappBg">
 							<div class="layerLoader">
 								<span><i class="fas fa-spinner fa-spin"></i></span>
 							</div>
 							<div class="content-item pos1 active">
 								<div class="inline-item">
-									<div class="TextLine Animate">Customer Centricity</div>
+									<div class="TextLine Animate ">Customer Centricity</div>
 									<p class="Animate2">Customers are our priority <br>
-										and we strive to improve customer experience.</p>
+										and we strive to improve customer experience</p>
 								</div>
 							</div>
 							<div class="content-item pos1">
@@ -280,6 +303,64 @@
 						</div>
 					</div>
 			    </div>
+			    <!-- mobile -->
+			    <div class="container-fluid d-sm-none d-lg-none d-sm-block">
+			    	<div class="layerLoader">
+						<span><i class="fas fa-spinner fa-spin"></i></span>
+					</div>
+					<div class="row">
+						<div class="col-12 col-lg-3 col-md-4 wrapLeft">
+							<div class="subHeader">
+								<p class="tagline">Our Values</p>
+							</div>
+							<div class="group-list">
+								<div class="list-item mobile-list active round1">
+									<div class="discList "></div>
+									<div class="contentFade">
+										<div class="headeBar">Customer Centricity</div>
+										<p>Customers are our priority<br>
+										and we strive to improve customer experience</p>
+									</div>
+								</div>
+								<div class="list-item mobile-list round2">
+									<div class="discList "></div>
+									<div class="contentFade">
+										<div class="headeBar">Innovation</div>
+										<p>We grow through innovation<br> it’s in our DNA</p>
+									</div>
+								</div>
+								<div class="list-item mobile-list round3">
+									<div class="discList "></div>
+									<div class="contentFade">
+										<div class="headeBar">Teamwork</div>
+										<p>Excellence and value can only <br>be created with great teamwork</p>
+									</div>
+								</div>
+								<div class="list-item mobile-list round4">
+									<div class="discList "></div>
+									<div class="contentFade">
+										<div class="headeBar">Passion</div>
+										<p>We work smart and hard in what we do with great passion</p>
+									</div>
+								</div>
+								<div class="list-item mobile-list round5">
+									<div class="discList "></div>
+									<div class="contentFade">
+										<div class="headeBar">Embrace Change</div>
+										<p>We warmly embrace change to make it our advantage</p>
+									</div>
+								</div>
+								<div class="list-item mobile-list round6">
+									<div class="discList "></div>
+									<div class="contentFade">
+										<div class="headeBar">Integrity</div>
+										<p>Our actions, words and promises always uphold integrity</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 		<section id="layer4" class="screen-page">
@@ -293,17 +374,22 @@
 							<div class="posWrap">
 								<div class="inline-item">
 									<div class="rotator-wrapp">
-										<span class="Animate" data-delay="2" data-animate="slideUp">
-											WE <br>
-											<span class="rotator-item first">
-												<span>Listen</span> <span>Develop</span> <span> Deliver</span>
-											</span>
-										</span><br>
-										<span class="Animate" data-delay="3" data-animate="slideUp">WITH<br>
-											<span class="rotator-item scnd">
-												<span>Passion</span> <span>Determination</span> <span>Pride</span>
-											</span>
-										</span>
+										<div class="Animate" data-delay="2" data-animate="slideUp">
+											<span>WE </span>
+											<div class="rotator-item first">
+												<div>Listen</div>
+												<div>Develop</div>
+												<div>Deliver</div>
+											</div>
+										</div>
+										<div class="Animate" data-delay="3" data-animate="slideUp" style="margin-top: -24px;">
+											<span>WITH </span>
+											<div class="rotator-item scnd">
+												<div>Passion</div>
+												<div>Determination</div>
+												<div>Pride</div>
+											</div>
+										</div>
 									</div>
 								</div>
 								<!-- <div class="inline-item Animate" data-delay="4" data-animate="slideUp">
@@ -339,21 +425,51 @@
 						<div class="subHeaher Animate2" data-delay="1" data-animate="slideUp">
 							<h1>Our Products</h1>
 						</div>
-						<div class="col-12 align-self-center">
+						<!-- desktop -->
+						<div class="col-12 align-self-center d-sm-block d-none">
 							<div class="row align-item-center justify-content-center">
-								<div class="col-lg-4 Animate2 text-center" data-delay="2" data-animate="scaleUp">
+								<div class="col-sm-4 col-lg-4 Animate2 text-center" data-delay="2" data-animate="scaleUp">
 									<div class="brROundProduct">
 										<a href="#" id="buttoRedkendi"><img src="images/product_item1.png" class="img-fluid"></a>
 									</div>
 								</div>
-								<div class="col-lg-4 Animate2 text-center" data-delay="3" data-animate="scaleUp">
+								<div class="col-sm-4 col-lg-4 Animate2 text-center" data-delay="3" data-animate="scaleUp">
 									<div class="brROundProduct">
 										<a href="#"><img src="images/product_item2.png" class="img-fluid"></a>
 									</div>
 								</div>
-								<div class="col-lg-4 Animate2 text-center" data-delay="4" data-animate="scaleUp">
+								<div class="col-sm-4 col-lg-4 Animate2 text-center" data-delay="4" data-animate="scaleUp">
 									<div class="brROundProduct">
 										<a href="#"><img src="images/product_item3.png" class="img-fluid"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- mobile -->
+						<div class="col-12 align-self-center d-lg-none d-sm-none">
+							<div class="row align-item-center justify-content-center">
+								<div class="col-lg-4 Animate2 text-center" data-delay="2" data-animate="scaleUp">
+									<div class="brROundProduct">
+										<a href="#" id="buttoRedkendi">
+											<img src="images/mobile/group_logo1.png" class="img-fluid">
+											<p>Caterer Marketplace</p>
+										</a>
+									</div>
+								</div>
+								<div class="col-lg-4 Animate2 text-center" data-delay="3" data-animate="scaleUp">
+									<div class="brROundProduct">
+										<a href="#">
+											<img src="images/mobile/group_logo2.png" class="img-fluid">
+											<p>Financial Partnership</p>
+										</a>
+									</div>
+								</div>
+								<div class="col-lg-4 Animate2 text-center" data-delay="4" data-animate="scaleUp">
+									<div class="brROundProduct">
+										<a href="#" >
+											<img src="images/mobile/group_logo3.png" class="img-fluid">
+											<p>Fresh Produce Sourcing</p>
+										</a>
 									</div>
 								</div>
 							</div>
@@ -366,8 +482,8 @@
 			<div class="ct-center">
 				<div class="container-fluid">
 				    <div class="row ">
-				     	<div class="col-6 "></div>
-						<div class="col-6 position-relative bgRightOp">
+				     	<div class="col-6 d-sm-block d-none"></div>
+						<div class="col-12 col-lg-6 position-relative bgRightOp">
 							<div class="formwrapping">
 								<div class="HeadLine">
 									<h2>Get Connected with Us</h2>
@@ -398,10 +514,9 @@
 			</div>
 			<div class="toTopBtn">
 				<a href="#">
-					<div style="margin-bottom: 3px;"><i class="fas fa-arrow-up"></i></div>
 					<div style="margin-bottom: -19px;"><i class="fas fa-angle-up"></i></div>
 					<div style="margin-bottom: -19px;opacity: .8;"><i class="fas fa-angle-up"></i></div>
-					<div style="opacity: .6;"><i class="fas fa-angle-up"></i></div>
+					<div style="opacity: .6;margin-bottom: -7px;"><i class="fas fa-angle-up"></i></div>
 					<h6>Back to top</h6>
 				</a>
 			</div>
@@ -468,6 +583,7 @@
 		<div class="CltoAction">Click here</div>
 		<div class="pushbottom rowUpslide" >
 	  		<a href="#" id="toUp"><i class="fas fa-arrow-up"></i></a>
+	  		<h6>Up</h6>
 	  	</div>
 	  	<div class="oneSLide pushbottom endslide">
 	  		<a href="#" id="toDOwn"><i class="fas fa-arrow-down"></i></a>
@@ -478,16 +594,21 @@
 	<script type="text/javascript" src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<script type="text/javascript" src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="slick/slick.min.js"></script>
-	<script type="text/javascript" src="js/rotator.js"></script>
 	<script type="text/javascript" src="js/sendMail.js"></script>
-	<script type="text/javascript" src="js/section-animate.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('.rotator-item').rotaterator({
-				fadeSpeed: 1500,
-                pauseSpeed: 1000,
-			});
-		})
+	<script>
+		if( navigator.userAgent.match(/Android/i)|| navigator.userAgent.match(/webOS/i)|| navigator.userAgent.match(/iPhone/i)|| navigator.userAgent.match(/iPad/i)|| navigator.userAgent.match(/iPod/i)|| navigator.userAgent.match(/BlackBerry/i)|| navigator.userAgent.match(/Windows Phone/i)
+		 ){
+		    document.write('<script type="text/javascript" src="js/mobileDevice.js"><\/script>');
+		  }
+		 else {
+		    document.write('<script type="text/javascript" src="js/section-animate.js"><\/script>');
+		  }
+
+	// if (screen && screen.width > 767) {
+	//   document.write('<script type="text/javascript" src="js/section-animate.js"><\/script>');
+	// }else{
+	// 	document.write('<script type="text/javascript" src="js/mobileDevice.js"><\/script>');
+	// }
 	</script>
 </body>
 </html>

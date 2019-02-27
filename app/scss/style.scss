@@ -375,6 +375,28 @@ footer{
 	&:after{
 		background-image: url('../images/mainbg_1.jpg');
 	}
+	.scrollDown-btn{
+		position: absolute;
+		bottom: 5px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 2;
+		line-height: 32px;
+    	opacity: .3;
+    	transition: all 1s ease;
+    	text-align: center;
+    	cursor: pointer;
+    	span{
+    		font-size: 12px;
+    	}
+    	i.fas{
+    		font-size: 23px;
+    	}
+    	&:hover{
+    		opacity: .8;
+    		transition: all 1s ease;
+    	}
+	}
 }
 #layer1{
 	&:after{
@@ -439,7 +461,7 @@ footer{
 	}
 	.rightBtm{
 	    position: relative;
-	    top: 25vh;
+	    top: 0;
         font-size: 15px;
 	    line-height: 24px;
 	    letter-spacing: 3px;
@@ -558,8 +580,8 @@ footer{
 					    		transition: all 1s ease;
 					    		&:after {
 					    			background-color: #3023AE;
-						    		animation: scaleY 6s linear;
-						    		-webkit-animation: scaleY 6s linear;
+						    		animation: scaleY 4s linear;
+						    		-webkit-animation: scaleY 4s linear;
 						    	}
 						    }
 						    &.round2{
@@ -567,8 +589,8 @@ footer{
 						    	transition: all 1s ease;
 						    	&:after {
 						    		background-color: #B4EC51;
-						    		animation: scaleY 76s linear;
-						    		-webkit-animation: scaleY 6s linear;
+						    		animation: scaleY 4s linear;
+						    		-webkit-animation: scaleY 4s linear;
 						    	}
 						    }
 						    &.round3{
@@ -576,8 +598,8 @@ footer{
 						    	transition: all 1s ease;
 						    	&:after {
 						    		background-color: #791817;
-						    		animation: scaleY 6s linear;
-						    		-webkit-animation: scaleY 6s linear;
+						    		animation: scaleY 4s linear;
+						    		-webkit-animation: scaleY 4s linear;
 						    	}
 						    }
 						    &.round4{
@@ -585,17 +607,17 @@ footer{
 						    	transition: all 1s ease;
 						    	&:after {
 						    		background-color: #53A0FD;
-						    		animation: scaleY 6s linear;
-						    		-webkit-animation: scaleY 6s linear;
+						    		animation: scaleY 4s linear;
+						    		-webkit-animation: scaleY 4s linear;
 						    	}
-						    }
+						    }	
 						    &.round5{
 						    	background-color: #FAD961;
 						    	transition: all 1s ease;
 						    	&:after {
 						    		background-color: #FAD961;
-						    		animation: scaleY 6s linear;
-						    		-webkit-animation: scaleY 6s linear;
+						    		animation: scaleY 4s linear;
+						    		-webkit-animation: scaleY 4s linear;
 						    	}
 						    }
 						    &.round6{
@@ -690,41 +712,54 @@ footer{
 	&:after{
 		background-image: url('../images/mainbg_6.jpg');
 	}
-	.posWrap {
-	    position: absolute;
-	    left: 50%;
-	    margin-top: 34px;
-	    transform: translateX(-50%);
-        width: 100%;
-        .inline-item {
-		    display: inline-block;
-		    vertical-align: top;
-		    width: 30%;
-		    position: relative;
-		    .rotator-wrapp {
-			    position: absolute;
-			    left: 50%;
-			    transform: translateX(-50%);
-			    text-align: center;
-			    font-size: 18px;
-			    width: 600px;
-			    div{
-			    	letter-spacing: 8px;
-			    	&.rotator-item {
-					    font-size: 40px !important;
-					    text-transform: uppercase;
-					    position: relative;
-	    				&.first{
-	    					left: -72px;
-	    				}
-	    				&.scnd{
-	    					left: 101px;
-	    				}
-					}
-			    }
-			}
-		}
+	.copyContent{
+		span{
+	    	font-family: 'Conv_Diavlo_BOLD_II_37';
+	    	font-size: 24px !important;
+	    }
 	}
+	.roundImg {
+	    margin-bottom: 15px;
+	}
+	.wrapcenter{
+	    position: relative;
+    	top: 134px;
+	}
+	// .posWrap {
+	//     position: absolute;
+	//     left: 50%;
+	//     margin-top: 34px;
+	//     transform: translateX(-50%);
+ //        width: 100%;
+ //        .inline-item {
+	// 	    display: inline-block;
+	// 	    vertical-align: top;
+	// 	    width: 30%;
+	// 	    position: relative;
+	// 	    .rotator-wrapp {
+	// 		    position: absolute;
+	// 		    left: 50%;
+	// 		    transform: translateX(-50%);
+	// 		    text-align: center;
+	// 		    font-size: 18px;
+	// 		    width: 600px;
+	// 		    div{
+	// 		    	letter-spacing: 8px;
+	// 		    	&.rotator-item {
+	// 				    font-size: 40px !important;
+	// 				    text-transform: uppercase;
+	// 				    position: relative;
+	//     				&.first{
+	//     					left: -72px;
+	//     				}
+	//     				&.scnd{
+	//     					left: 101px;
+	//     				}
+	// 				}
+	// 		    }
+	// 		}
+	// 	}
+	// }
 }
 #layer5{
 	&:after{
@@ -914,6 +949,7 @@ footer{
 	left: 0;
 	top: 34px;
 	font-family: 'Conv_Diavlo_BOLD_II_37';
+    text-shadow: 2px 4px 8px #000;
 }
 #ProdutWrapper-section{
 	display: none;
@@ -1495,7 +1531,7 @@ footer{
 			    float: left;
     			width: 13%;
 				img{
-					max-width: 100%;
+					max-width: 75%;
 				}
 			}
 			.copyContent {
@@ -1725,29 +1761,56 @@ footer{
 			&:after{
 				background-image: url(../images/mobile/image_bg_5.jpg);
 			}
-			.tagline{
-				text-align: center;
-			    text-shadow: 0 2px 6px #000;
-			}
-			.posWrap {
-				margin-top: 64px;
-		        .inline-item {
-				   width: 100%;
-				    .rotator-wrapp {
-					    font-size: 14px;
-					    left: 50% !important;
-					    transform: translate(-50%,-50%) !important;
-					    div{
-					    	&.rotator-item {
-							    font-size: 22px !important;
-							    &.first, &.scnd{
-							    	left: 0;
-							    }
-							}
-					    }
-					}
+			.innerText{
+				.tagline {
+				    margin-bottom: 0;
 				}
 			}
+			.wrapcenter{
+				top: 0;
+				left: 24px;
+			}
+			.wrapleft, .wrapcenter, .wrapright{
+				text-align: left !important;
+				margin-bottom: 34px;
+			}
+			.roundImg{
+			    float: left;
+    			width: 13%;
+				img{
+					max-width: 75%;
+				}
+			}
+			.copyContent {
+				float: left;
+				width: 85%;
+				span{
+					font-size: 16px !important;
+				}
+			}
+			// .tagline{
+			// 	text-align: center;
+			//     text-shadow: 0 2px 6px #000;
+			// }
+			// .posWrap {
+			// 	margin-top: 64px;
+		 //        .inline-item {
+			// 	   width: 100%;
+			// 	    .rotator-wrapp {
+			// 		    font-size: 14px;
+			// 		    left: 50% !important;
+			// 		    transform: translate(-50%,-50%) !important;
+			// 		    div{
+			// 		    	&.rotator-item {
+			// 				    font-size: 22px !important;
+			// 				    &.first, &.scnd{
+			// 				    	left: 0;
+			// 				    }
+			// 				}
+			// 		    }
+			// 		}
+			// 	}
+			// }
 		}
 		#layer5{
 			&:after{

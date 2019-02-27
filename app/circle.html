@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+    <style type="text/css">
+body { padding: 2em; }
+#container { width: 600px; height: 600px; border: 1px solid #000; position: relative; margin: 0 auto; }
+#center {position: absolute; left: 50%;top: 50%;transform: translate(-50%,-50%); }
+.field { position: absolute;}
+#crosshair-x { width: 600px; height: 1px; background: #000; position: absolute; left: 0; top: 300px; }
+#crosshair-y { width: 1px; height: 600px; background: #000; position: absolute; left: 300px; top: 0; }
+
+    </style>
+  </head>
+
+  <body>
+   <div id="container">
+      <div id="center"><i class="fas fa-circle"></i></div>
+      <div id="crosshair-x"></div>
+      <div id="crosshair-y"></div>
+      <div class="field"><i class="fas fa-circle"></i></div>
+      <div class="field"><i class="fas fa-circle"></i></div>
+      <div class="field"><i class="fas fa-circle"></i></div>
+      <div class="field"><i class="fas fa-circle"></i></div>
+      <div class="field"><i class="fas fa-circle"></i></div>
+      <div class="field"><i class="fas fa-circle"></i></div>
+      <div class="field"><i class="fas fa-circle"></i></div>
+      <div class="field"><i class="fas fa-circle"></i></div>
+  </div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+    var radius = 301;
+    var fields = $('.field'), container = $('#container'), width = container.width(), height = container.height();
+    var angle = 0, step = (2*Math.PI) / fields.length;
+    fields.each(function() {
+    var x = Math.round(width/2 + radius * Math.cos(angle) - $(this).width()/2);
+    var y = Math.round(height/2 + radius * Math.sin(angle) - $(this).height()/2);
+    if(window.console) {
+        console.log($(this).text(), x, y);
+    }
+    $(this).css({
+        left: x + 'px',
+        top: y + 'px'
+    });
+    angle += step;
+});
+    </script>
+  </body>
+</html>

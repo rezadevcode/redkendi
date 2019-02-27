@@ -260,7 +260,7 @@ $(function(){
                 varAnimate.removeClass('runScaleX');
             })
 
-            if (el == 1 || el == 5) { // setion 2
+            if (el == 1 || el == 4 || el == 5) { // setion 2
                 _parent.find('.batchOne').fadeOut(1000,function(){ //fade 1
             
                     let batchtwo = _parent.find('.batchtwo');
@@ -297,19 +297,17 @@ $(function(){
                 $('.content-item.pos1').eq(0).addClass('active');
                 _parent.find('.batchOne').fadeOut(750,function(){
                   _parent.find('.batchtwo').fadeIn(1000,function(){
-                    $('.content-item').find('.Animate').addClass('slideUp');
-                        setTimeout(function(){
+                        $('.content-item').find('.Animate').addClass('slideUp');
+                        // setTimeout(function(){
                             $('.content-item').find('.Animate2').addClass('slideUp');
-
-                            //autorun our values
-                            if (navigator.userAgent.match(/iPad/i)) { 
-                                autoRunOurvalueforIpda() //ipad
-                            }else{
-                                autoRunOurvalue(); //others
-                            }
-
-                        },300);
+                        // },300);
                   });
+                  //autorun our values
+                    if (navigator.userAgent.match(/iPad/i)) { 
+                        autoRunOurvalueforIpda() //ipad
+                    }else{
+                        autoRunOurvalue(); //others
+                    }
                 })
             }
         });
@@ -405,7 +403,7 @@ $(function(){
         // })
 
         if (el > 0) {
-            if (el == 1 || el == 3 || el == 5) {
+            if (el == 1 || el == 3 || el == 4 || el == 5) {
                 setTimeout( function(){  // progressbar delay
                     progressBar(el);
                 },1500);
@@ -416,12 +414,11 @@ $(function(){
                 },3000);
             }
         }
-        if( el == 4 ){
-            rotatorText();
-        }else if(el > 0){
-            ClearRotator();
-        }
-    
+        // if( el == 4 ){
+        //     rotatorText();
+        // }else if(el > 0){
+        //     ClearRotator();
+        // }
     }
 
     function ClearRotator(){

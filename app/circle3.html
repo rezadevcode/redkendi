@@ -129,17 +129,18 @@ div.tooltip {
 			attr("transform", function (d) {return "translate(" + d.x + "," + d.y + ")";}).
 			attr("r", function (d) {return 10 * d.f + "px";});
 
-			vis.selectAll("g").
-			data(start).
-			append("svg:text").
+			// vis.selectAll("g").
+			// data(start).
+			// append("svg:text").
 
-			attr("dx", "-10px").
-			attr("dy", "5px").
-			attr("fill", "red");
+			// attr("dx", "-10px").
+			// attr("dy", "5px").
+			// attr("fill", "red");
 
-			vis.select("#p1").
-			attr("fill", "blue");
+			// vis.select("#p1").
+			// attr("fill", "blue");
 
+			// line
 			setTimeout(function(){
 				vis.selectAll("line").
 				style("stroke-opacity", 0.2);

@@ -5,6 +5,7 @@ $(function(){
     maxCount = $pages.length -1;
     var timerInterval;
 
+    // preloader logo kendi
     $(document).ready(function () {
         $('body').css('overflow','hidden');
 
@@ -50,8 +51,10 @@ $(function(){
         });
     });
     
+    // inisiasi index / element 0 sebagai section active
     $pages.eq( current ).addClass( 'current' );
 
+    // trigger untuk scroll down dan scroll up
     var timer = 0;
     setInterval(function () { timer += 50; }, 50);
 
@@ -73,27 +76,29 @@ $(function(){
         return false;
     });
 
+    // button scroll down tengah bawa
     $('.scrollDown-btn').click(function(e){
         e.preventDefault();
+
         scrollDown(0);  
     })
 
+    // button scroll down kanan bawah
     $('#toDOwn').click(function(e){
         e.preventDefault();
         let indexParameter = $('.current');
-
         let getIndex = $('.screen-page').index(indexParameter);
-        console.log(getIndex);
+
         scrollDown(getIndex);   
     })
 
+    // button scroll Up kanan bawah
     $('#toUp').click(function(e){
         e.preventDefault();
             
         let indexParameter = $('.current');
-
         let getIndex = $('.screen-page').index(indexParameter);
-        console.log(getIndex);
+
         scrollUp(getIndex);
 
     })
@@ -103,20 +108,20 @@ $(function(){
 
             let curPage  = $('.screen-page.current');
             let nextPage = curPage.next();
-            el = el +1;
+            el = el +1; // index element 
 
-            roundedTransition(); // run transition
+            roundedTransition(); // menjalankan transisi layer merah utk tiap pergantian section
 
-            setTimeout(function(){
+            setTimeout(function(){ // delay untuk menampilkan content section berikut nya
 
-                contentOutanimate(curPage); //content out
-                displayInFooter(el); // footer
+                contentOutanimate(curPage); //reset animasi dan posisi content
+                displayInFooter(el); // displayin footer
 
-                nextPage.addClass('current');
-                curPage.removeClass('current'); 
+                nextPage.addClass('current'); //addclass active ke section berikutnya
+                curPage.removeClass('current'); //removeClass active pada section sebelum nya
 
                 setTimeout(function(){
-                    contentInanimate(el);
+                    contentInanimate(el); //menampilkan kontent disection active
                 },250);
 
             },650); 
@@ -131,18 +136,18 @@ $(function(){
             let curPage = $('.screen-page.current');
             let prevPage = curPage.prev();
 
-            roundedTransition(el); // run transition
+            roundedTransition(el); // menjalankan transisi layer merah utk tiap pergantian section
 
-            setTimeout(function(){
+            setTimeout(function(){ // delay untuk menampilkan content section berikut nya
 
-                contentOutanimate(curPage); //content out
-                displayInFooter(el); // footer
+                contentOutanimate(curPage); //reset animasi dan posisi content
+                displayInFooter(el); // displayin footer
 
-                prevPage.addClass('current'); 
-                curPage.removeClass('current');
+                prevPage.addClass('current'); //addclass active ke section berikutnya
+                curPage.removeClass('current'); //removeClass active pada section sebelum nya
 
                 setTimeout(function(){
-                    contentInanimate(el);
+                    contentInanimate(el); //menampilkan kontent disection active
                 },250);
 
             },650); 
@@ -153,6 +158,7 @@ $(function(){
         }
     }
 
+    //pengecekan elemetn untuk menampilan footer
     function displayInFooter(el){
 
         if (el > 0) {
@@ -186,6 +192,8 @@ $(function(){
         }
 
     }
+
+    // fungsi untuk transisi tiap pergantian section
     function roundedTransition(){
 
         getSelector = $('.roundTrans');
@@ -197,7 +205,8 @@ $(function(){
         });
 
     }
-    function progressBar(el){ //section 2
+    // fungsi untuk progress line atas
+    function progressBar(el){
         let _parent = $('.screen-page').eq(el);
         let varAnimate = $('.progressingbar');
 
@@ -250,7 +259,8 @@ $(function(){
             }
         });
     }
-    function animateMovie(el){ //section 2
+    //fungsi untuk run animasi di section 1,4 dan 5
+    function animateMovie(el){ 
         
         let time = 50;
         let funcAr = reindexArray(el,'Animate2');
@@ -274,6 +284,8 @@ $(function(){
             
         })
     }
+
+    // fungsi untuk reset animasi dan konten
     function contentOutanimate(el){
 
         $('.progressingbar').fadeOut(0,function(){
@@ -311,6 +323,8 @@ $(function(){
         clearInterval(timerInterval);
         // $('.overlayerbg').fadeOut();
     }
+
+    // fungsi menampilkan konten di section aktif
     function contentInanimate(el){
         
         let time = 50;
@@ -347,12 +361,6 @@ $(function(){
                 },2000);
             }
         }
-        // if( el == 4 ){
-        //     rotatorText();
-        // }else if(el > 0){
-        //     ClearRotator();
-        // }
-    
     }
 
     // var appRotator = {
@@ -376,6 +384,7 @@ $(function(){
         })
     }
 
+    // fungsi untuk custom urutan content animasi
     function reindexArray(el,clasAnimate){
 
         var storeArray = new Array();
@@ -403,75 +412,8 @@ $(function(){
     // ======== our values =========//
     let elemObjt =  $('.list-item');
     let contentElem = $('.content-item');
-
-    $('.group-list').on('click','.list-item',function(){
-
-        // elemObjt.removeClass('active');
-        
-        // $(this).addClass('active');
-        _index_ = $(this).index();
-        // tabOurValues(_index_);
-    })
-
-    function tabOurValues(_index_){
-
-        var loader_     = $('.layerLoader');
-        var timeSeting;
-
-        clearTimeout(timeSeting);
-
-        loader_.fadeIn(500,function(){
-
-            // $('.content-item').find('.inline-item').fadeOut();
-            $('.content-item').find('.Animate, .Animate2').removeClass('leftoright righttoleft slideUp tobottom');
-            $('.content-item').eq(_index_).addClass('active');
-
-            var classAnime;
-
-            switch(_index_){
-                case 0:
-                    classAnime = 'slideUp';
-                    break;
-                case 1:
-                    classAnime = 'leftoright';
-                    break;
-                case 2:
-                    classAnime = 'righttoleft';
-                    break;
-                case 3:
-                    classAnime = 'tobottom';
-                    break;
-                case 4:
-                    classAnime = 'slideUp';
-                    break;
-                case 5:
-                    classAnime = 'leftoright';
-                    break;
-            }
-        
-            var img = new Image();
-            img.src = 'images/background/bg_'+_index_+'.jpg';
-
-            img.onload = function() {
-                loader_.fadeOut(500);
-                $('.ourValueBgitem').css('background-image','url('+img.src+')');
-                var timeSeting = setTimeout(function(){
-                    // $('.content-item').eq(_index_).find('.inline-item').fadeIn(800);
-                    $('.content-item').eq(_index_).find('.Animate').addClass(classAnime);
-                    setTimeout(function(){
-                        $('.content-item').eq(_index_).find('.Animate2').addClass(classAnime);
-                    },300);
-
-                },500);
-            };
-            
-        });
-
-        $('.list-item, .content-item').removeClass('active');
-        $('.list-item').eq(_index_).addClass('active');
-        
-    }
     
+    // fungsi click untuk section our values pada point2 nya
     $('.group-list').on('click','.list-item',function(){
 
         clearInterval(timerInterval);
@@ -533,6 +475,7 @@ $(function(){
 
         console.log(counter);
 
+        // menjalankan point our value secara otomatis
         timerInterval = setInterval(function () {
             counter++;
             var loader_     = $('.layerLoader');
@@ -597,7 +540,8 @@ $(function(){
 
         }, 4000);
     })
-
+    
+    // fungsi menjalankan point our value secara otomatis
     function autoRunOurvalue(){
 
         // var timer;
@@ -671,11 +615,13 @@ $(function(){
 
     // =========== end our values =========//
 
+    // trigger untuk membuka layer product detail
     $('.wrapper-position').on('click','#buttoRedkendi',function(event){
         event.preventDefault();
         productItem();
     })
     
+    // trigger untuk bak dari layer produk detail ke section produk
     $('.headerProductItem').on('click','#backBtn',function(event){
         event.preventDefault();
 
@@ -696,11 +642,13 @@ $(function(){
 
     })
 
+    // trigger untuk kembali ke section 1
     $('.toTopBtn').click(function(event){
         event.preventDefault();
         scrolltoTop();
     })
 
+    // fungsi untuk menampilkan produk item
     function productItem(){
 
         var _bodyParent = $('body');
@@ -721,6 +669,7 @@ $(function(){
     
     }
 
+    // fungsi untuk kembali ke section 1
     function scrolltoTop(){
 
         let curPage = $('.screen-page.current');
